@@ -15,9 +15,7 @@ export default function Home() {
     }
   };
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
-  };
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -35,27 +33,17 @@ export default function Home() {
               Pronto para Proporcionar o Melhor Cuidado?
             </h3>
             <p className="text-xl mb-8 opacity-90" data-testid="subtitle-cta">
-              Entre em contato conosco agora e garante tranquilidade e qualidade de vida para seu ente querido.
+              Preencha seus dados e fale conosco via WhatsApp para garantir o melhor cuidado para seu ente querido.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button 
                 onClick={scrollToForm}
                 size="lg"
-                className="bg-white text-primary hover:bg-neutral-100 text-lg font-semibold"
-                data-testid="button-cta-orcamento"
-              >
-                <ClipboardList className="mr-2" />
-                Solicitar Orçamento
-              </Button>
-              <Button 
-                onClick={handleWhatsAppClick}
-                variant="outline" 
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg font-semibold"
-                data-testid="button-cta-whatsapp"
+                className="bg-white text-primary hover:bg-neutral-100 text-lg font-semibold px-8 py-4"
+                data-testid="button-cta-form"
               >
                 <span className="mr-2">📱</span>
-                WhatsApp Direto
+                Preencher Dados e Falar no WhatsApp
               </Button>
             </div>
           </div>

@@ -1,8 +1,11 @@
 import { Heart, Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+  const scrollToForm = () => {
+    const element = document.getElementById('contato');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
@@ -20,8 +23,8 @@ export default function Footer() {
             <div className="flex space-x-4">
               <Facebook className="text-xl text-neutral-400 hover:text-primary cursor-pointer transition-colors" data-testid="icon-facebook" />
               <Instagram className="text-xl text-neutral-400 hover:text-primary cursor-pointer transition-colors" data-testid="icon-instagram" />
-              <button onClick={handleWhatsAppClick}>
-                <span className="text-xl text-neutral-400 hover:text-secondary cursor-pointer transition-colors" data-testid="icon-whatsapp-footer">📱</span>
+              <button onClick={scrollToForm}>
+                <span className="text-xl text-neutral-400 hover:text-secondary cursor-pointer transition-colors" data-testid="icon-form-footer">📱</span>
               </button>
             </div>
           </div>

@@ -9,9 +9,7 @@ export default function HeroSection() {
     }
   };
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
-  };
+
 
   return (
     <section id="inicio" className="bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
@@ -26,25 +24,15 @@ export default function HeroSection() {
               Oferecemos serviços de home care com cuidadores qualificados para idosos e pacientes com comorbidades, 
               garantindo segurança, carinho e qualidade de vida.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex justify-center">
               <Button 
                 onClick={scrollToForm}
                 size="lg" 
-                className="bg-primary text-white hover:bg-primary/90 text-lg font-semibold"
+                className="bg-secondary text-white hover:bg-secondary/90 text-lg font-semibold px-8 py-4"
                 data-testid="button-solicitar-orcamento"
               >
-                <ClipboardList className="mr-2" size={20} />
-                Solicitar Orçamento
-              </Button>
-              <Button 
-                onClick={handleWhatsAppClick}
-                variant="outline" 
-                size="lg"
-                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white text-lg font-semibold"
-                data-testid="button-whatsapp-hero"
-              >
                 <span className="mr-2">📱</span>
-                Falar no WhatsApp
+                Preencher Dados e Falar no WhatsApp
               </Button>
             </div>
           </div>

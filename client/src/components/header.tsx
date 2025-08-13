@@ -13,8 +13,11 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+  const scrollToForm = () => {
+    const element = document.getElementById('contato');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
@@ -60,11 +63,11 @@ export default function Header() {
           
           <div className="flex items-center space-x-4">
             <Button 
-              onClick={handleWhatsAppClick}
+              onClick={scrollToForm}
               className="bg-secondary text-white hover:bg-secondary/90 hidden md:flex"
-              data-testid="button-whatsapp-header"
+              data-testid="button-form-header"
             >
-              <span className="mr-2">📱</span>WhatsApp
+              <span className="mr-2">📱</span>Solicitar Orçamento
             </Button>
             
             {/* Mobile Menu Button */}
@@ -111,11 +114,11 @@ export default function Header() {
                 Contato
               </button>
               <Button 
-                onClick={handleWhatsAppClick}
+                onClick={scrollToForm}
                 className="bg-secondary text-white hover:bg-secondary/90 justify-start"
-                data-testid="button-whatsapp-mobile"
+                data-testid="button-form-mobile"
               >
-                <span className="mr-2">📱</span>WhatsApp
+                <span className="mr-2">📱</span>Solicitar Orçamento
               </Button>
             </div>
           </div>
