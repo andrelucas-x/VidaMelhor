@@ -46,11 +46,11 @@ export default function Header() {
               Serviços
             </button>
             <button 
-              onClick={() => scrollToSection('equipe')}
+              onClick={() => scrollToSection('diferenciais')}
               className="text-neutral-500 hover:text-primary transition-colors"
-              data-testid="nav-equipe"
+              data-testid="nav-diferenciais"
             >
-              Equipe
+              Diferenciais
             </button>
             <button 
               onClick={() => scrollToSection('contato')}
@@ -100,11 +100,11 @@ export default function Header() {
                 Serviços
               </button>
               <button 
-                onClick={() => scrollToSection('equipe')}
+                onClick={() => scrollToSection('diferenciais')}
                 className="text-left text-neutral-500 hover:text-primary transition-colors"
-                data-testid="nav-mobile-equipe"
+                data-testid="nav-mobile-diferenciais"
               >
-                Equipe
+                Diferenciais
               </button>
               <button 
                 onClick={() => scrollToSection('contato')}

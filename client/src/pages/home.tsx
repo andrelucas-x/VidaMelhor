@@ -2,9 +2,8 @@ import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import CareGallerySection from "@/components/care-gallery-section";
-import TestimonialsSection from "@/components/testimonials-section";
 import PreQualificationForm from "@/components/pre-qualification-form";
-import TeamSection from "@/components/team-section";
+import DifferentialsSection from "@/components/differentials-section";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { ClipboardList } from "lucide-react";
@@ -26,9 +25,8 @@ export default function Home() {
         <HeroSection />
         <ServicesSection />
         <CareGallerySection />
-        <TestimonialsSection />
+        <DifferentialsSection />
         <PreQualificationForm />
-        <TeamSection />
         
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white" data-testid="section-cta">
