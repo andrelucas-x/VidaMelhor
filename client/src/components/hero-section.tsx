@@ -38,8 +38,8 @@ export default function HeroSection() {
           </div>
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Cuidadora profissional auxiliando paciente idoso em ambiente domiciliar" 
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+              alt="Cuidadora sorrindo enquanto ajuda idosa com carinho em ambiente domiciliar aconchegante" 
               className="rounded-2xl shadow-2xl w-full h-auto"
               data-testid="img-hero"
             />

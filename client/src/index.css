@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,8 +36,8 @@
   --sidebar-accent-foreground: hsl(222.2 84% 4.9%);
   --sidebar-border: hsl(214.3 31.8% 91.4%);
   --sidebar-ring: hsl(221.2 83.2% 53.3%);
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-serif: Georgia, serif;
+  --font-sans: 'Source Sans 3', system-ui, sans-serif;
+  --font-serif: 'Merriweather', Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: 0.5rem;
   --neutral-50: hsl(210 20% 98%);
@@ -79,6 +79,15 @@
   
   body {
     @apply bg-background text-foreground font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+  
+  .serif {
+    font-family: var(--font-serif);
   }
   
   .text-neutral-50 {

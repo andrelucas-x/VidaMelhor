@@ -48,7 +48,8 @@ Preferred communication style: Simple, everyday language.
 - **shadcn/ui**: Complete component library with Radix UI primitives
 - **Tailwind CSS**: Utility-first CSS framework with custom configuration
 - **Lucide Icons**: Modern icon library for consistent iconography
-- **Google Fonts**: Custom font loading (Inter, DM Sans, Fira Code, Geist Mono)
+- **Google Fonts**: Healthcare-focused typography (Source Sans 3 for body text, Merriweather serif for headings)
+- **Visual Design**: Professional healthcare imagery focused on humanized care and patient-caregiver interactions
 
 ### Database and ORM
 - **Neon Database**: Serverless PostgreSQL database for production
