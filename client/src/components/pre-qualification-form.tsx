@@ -46,8 +46,15 @@ export default function PreQualificationForm() {
     setIsSubmitting(true);
     
     try {
+      // Prepare data for WhatsApp, ensuring null values become undefined
+      const whatsappData = {
+        ...data,
+        comorbidades: data.comorbidades || undefined,
+        observacoes: data.observacoes || undefined
+      };
+      
       // Redirect to WhatsApp with formatted message
-      redirectToWhatsApp(data);
+      redirectToWhatsApp(whatsappData);
       
       toast({
         title: "Sucesso!",
@@ -183,6 +190,7 @@ export default function PreQualificationForm() {
                       <Textarea 
                         placeholder="Descreva as condições de saúde específicas que requerem atenção..."
                         {...field}
+                        value={field.value || ""}
                         data-testid="textarea-comorbidades"
                       />
                     </FormControl>
@@ -307,6 +315,7 @@ export default function PreQualificationForm() {
                         placeholder="Conte-nos mais sobre as necessidades específicas, rotina do paciente, medicamentos, ou qualquer informação relevante..."
                         rows={4}
                         {...field}
+                        value={field.value || ""}
                         data-testid="textarea-observacoes"
                       />
                     </FormControl>
