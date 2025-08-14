@@ -28,7 +28,7 @@ Aguardo retorno para mais informações sobre o serviço de home care. Obrigado!
   return message;
 }
 
-export function redirectToWhatsApp(formData: WhatsAppFormData, phoneNumber: string = "5511999999999"): void {
+export function redirectToWhatsApp(formData: WhatsAppFormData, phoneNumber: string = "554199625464"): void {
   const message = formatWhatsAppMessage(formData);
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
