@@ -36,9 +36,7 @@ export const insertPreQualificationSchema = createInsertSchema(preQualifications
   telefone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos"),
   idadePaciente: z.string().min(1, "Idade do paciente é obrigatória"),
   tipoCuidado: z.string().min(1, "Tipo de cuidado é obrigatório"),
-  horarioPreferencial: z.string().optional(),
-  urgencia: z.string().optional(),
-  diasSemana: z.array(z.string()).optional(),
+  observacoes: z.string().optional(),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;

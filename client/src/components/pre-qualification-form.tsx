@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -34,7 +34,8 @@ export default function PreQualificationForm() {
       responsavelNome: "",
       telefone: "",
       idadePaciente: "",
-      tipoCuidado: ""
+      tipoCuidado: "",
+      observacoes: ""
     }
   });
 
@@ -42,12 +43,13 @@ export default function PreQualificationForm() {
     setIsSubmitting(true);
     
     try {
-      // Prepare data for WhatsApp with only the essential fields
+      // Prepare data for WhatsApp with only the essential fields and optional observations
       const whatsappData = {
         responsavelNome: data.responsavelNome,
         telefone: data.telefone,
         idadePaciente: data.idadePaciente,
-        tipoCuidado: data.tipoCuidado
+        tipoCuidado: data.tipoCuidado,
+        observacoes: data.observacoes || undefined
       };
       
       // Redirect to WhatsApp with formatted message
@@ -174,6 +176,26 @@ export default function PreQualificationForm() {
                   )}
                 />
               </div>
+
+              <FormField
+                control={form.control}
+                name="observacoes"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel data-testid="label-observacoes">Observações Adicionais (Opcional)</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="Nos conte mais detalhes sobre as necessidades específicas, rotina do paciente, horários preferenciais ou qualquer informação que considere importante..."
+                        className="resize-none"
+                        rows={4}
+                        {...field} 
+                        data-testid="textarea-observacoes"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
               <div className="text-center">
                 <Button 

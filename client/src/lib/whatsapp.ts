@@ -17,6 +17,7 @@ export function formatWhatsAppMessage(data: WhatsAppFormData): string {
 📱 *Telefone:* ${data.telefone}
 👥 *Idade do Paciente:* ${data.idadePaciente}
 🩺 *Tipo de Cuidado:* ${data.tipoCuidado}
+${data.observacoes ? `📝 *Observações:* ${data.observacoes}` : ''}
 
 Gostaria de receber mais informações sobre os serviços de home care. Aguardo contato!`;
 
