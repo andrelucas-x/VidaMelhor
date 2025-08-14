@@ -71,7 +71,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <Button 
               onClick={scrollToForm}
-              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 hidden md:flex font-semibold px-6 py-2 rounded-full tracking-wide"
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hidden md:flex font-semibold px-6 py-2 rounded-full tracking-wide"
               data-testid="button-form-header"
             >
               <SiWhatsapp className="mr-2 text-lg" />
@@ -116,7 +116,7 @@ export default function Header() {
               </button>
               <Button 
                 onClick={scrollToForm}
-                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 justify-start font-semibold rounded-full mt-2 tracking-wide"
+                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 justify-start font-semibold rounded-full mt-2 tracking-wide"
                 data-testid="button-form-mobile"
               >
                 <SiWhatsapp className="mr-2 text-lg" />

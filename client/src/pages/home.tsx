@@ -42,7 +42,7 @@ export default function Home() {
               <Button 
                 onClick={scrollToForm}
                 size="lg"
-                className="bg-white text-emerald-700 hover:bg-neutral-50 text-lg font-bold px-8 py-4 tracking-wide"
+                className="bg-white text-emerald-600 hover:bg-neutral-50 text-lg font-bold px-8 py-4 tracking-wide"
                 data-testid="button-cta-form"
               >
                 <SiWhatsapp className="mr-3 text-xl" />

@@ -29,7 +29,7 @@ export default function HeroSection() {
               <Button 
                 onClick={scrollToForm}
                 size="lg" 
-                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-lg font-bold px-8 py-4 tracking-wide"
+                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-lg font-bold px-8 py-4 tracking-wide"
                 data-testid="button-solicitar-orcamento"
               >
                 <SiWhatsapp className="mr-3 text-xl" />
