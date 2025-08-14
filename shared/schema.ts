@@ -16,9 +16,9 @@ export const preQualifications = pgTable("pre_qualifications", {
   idadePaciente: text("idade_paciente").notNull(),
   tipoCuidado: text("tipo_cuidado").notNull(),
   comorbidades: text("comorbidades"),
-  horarioPreferencial: text("horario_preferencial").notNull(),
-  urgencia: text("urgencia").notNull(),
-  diasSemana: text("dias_semana").array().notNull(),
+  horarioPreferencial: text("horario_preferencial"),
+  urgencia: text("urgencia"),
+  diasSemana: text("dias_semana").array(),
   observacoes: text("observacoes"),
   createdAt: timestamp("created_at").default(sql`now()`).notNull(),
 });
@@ -36,9 +36,9 @@ export const insertPreQualificationSchema = createInsertSchema(preQualifications
   telefone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos"),
   idadePaciente: z.string().min(1, "Idade do paciente é obrigatória"),
   tipoCuidado: z.string().min(1, "Tipo de cuidado é obrigatório"),
-  horarioPreferencial: z.string().min(1, "Horário preferencial é obrigatório"),
-  urgencia: z.string().min(1, "Urgência é obrigatória"),
-  diasSemana: z.array(z.string()).min(1, "Selecione pelo menos um dia da semana"),
+  horarioPreferencial: z.string().optional(),
+  urgencia: z.string().optional(),
+  diasSemana: z.array(z.string()).optional(),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;

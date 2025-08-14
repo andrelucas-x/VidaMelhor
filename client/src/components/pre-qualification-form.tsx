@@ -36,9 +36,9 @@ export default function PreQualificationForm() {
       idadePaciente: "",
       tipoCuidado: "",
       comorbidades: "",
-      horarioPreferencial: "",
-      urgencia: "",
-      diasSemana: [],
+      horarioPreferencial: undefined,
+      urgencia: undefined,
+      diasSemana: undefined,
       observacoes: ""
     }
   });
@@ -47,11 +47,14 @@ export default function PreQualificationForm() {
     setIsSubmitting(true);
     
     try {
-      // Prepare data for WhatsApp, ensuring null values become undefined
+      // Prepare data for WhatsApp, ensuring empty values become undefined
       const whatsappData = {
         ...data,
         comorbidades: data.comorbidades || undefined,
-        observacoes: data.observacoes || undefined
+        observacoes: data.observacoes || undefined,
+        horarioPreferencial: data.horarioPreferencial || undefined,
+        urgencia: data.urgencia || undefined,
+        diasSemana: data.diasSemana && data.diasSemana.length > 0 ? data.diasSemana : undefined
       };
       
       // Redirect to WhatsApp with formatted message
@@ -186,7 +189,7 @@ export default function PreQualificationForm() {
                 name="comorbidades"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel data-testid="label-comorbidades">Comorbidades Específicas do Paciente</FormLabel>
+                    <FormLabel data-testid="label-comorbidades">Comorbidades Específicas do Paciente (opcional)</FormLabel>
                     <FormControl>
                       <Textarea 
                         placeholder="Descreva as condições de saúde específicas que requerem atenção..."
@@ -206,7 +209,7 @@ export default function PreQualificationForm() {
                   name="horarioPreferencial"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel data-testid="label-horario">Horário Preferencial *</FormLabel>
+                      <FormLabel data-testid="label-horario">Horário Preferencial (opcional)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger data-testid="select-horario">
@@ -233,7 +236,7 @@ export default function PreQualificationForm() {
                   name="urgencia"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel data-testid="label-urgencia">Quando precisa iniciar? *</FormLabel>
+                      <FormLabel data-testid="label-urgencia">Quando precisa iniciar? (opcional)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger data-testid="select-urgencia">
@@ -261,7 +264,7 @@ export default function PreQualificationForm() {
                   <FormItem>
                     <div className="mb-4">
                       <FormLabel className="text-base" data-testid="label-dias-semana">
-                        Dias da Semana Necessários *
+                        Dias da Semana Necessários (opcional)
                       </FormLabel>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
@@ -280,10 +283,11 @@ export default function PreQualificationForm() {
                                   <Checkbox
                                     checked={field.value?.includes(dia.id)}
                                     onCheckedChange={(checked) => {
+                                      const currentValue = field.value || [];
                                       return checked
-                                        ? field.onChange([...field.value, dia.id])
+                                        ? field.onChange([...currentValue, dia.id])
                                         : field.onChange(
-                                            field.value?.filter(
+                                            currentValue.filter(
                                               (value) => value !== dia.id
                                             )
                                           )
@@ -310,7 +314,7 @@ export default function PreQualificationForm() {
                 name="observacoes"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel data-testid="label-observacoes">Observações Adicionais</FormLabel>
+                    <FormLabel data-testid="label-observacoes">Observações Adicionais (opcional)</FormLabel>
                     <FormControl>
                       <Textarea 
                         placeholder="Conte-nos mais sobre as necessidades específicas, rotina do paciente, medicamentos, ou qualquer informação relevante..."

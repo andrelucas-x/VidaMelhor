@@ -4,9 +4,9 @@ export interface WhatsAppFormData {
   idadePaciente: string;
   tipoCuidado: string;
   comorbidades?: string;
-  horarioPreferencial: string;
-  urgencia: string;
-  diasSemana: string[];
+  horarioPreferencial?: string;
+  urgencia?: string;
+  diasSemana?: string[];
   observacoes?: string;
 }
 
@@ -18,9 +18,9 @@ export function formatWhatsAppMessage(data: WhatsAppFormData): string {
 👥 *Idade do Paciente:* ${data.idadePaciente}
 🩺 *Tipo de Cuidado:* ${data.tipoCuidado}
 ${data.comorbidades ? `🏥 *Comorbidades:* ${data.comorbidades}` : ''}
-⏰ *Horário Preferencial:* ${data.horarioPreferencial}
-⚡ *Urgência:* ${data.urgencia}
-📅 *Dias da Semana:* ${data.diasSemana.join(', ')}
+${data.horarioPreferencial ? `⏰ *Horário Preferencial:* ${data.horarioPreferencial}` : ''}
+${data.urgencia ? `⚡ *Urgência:* ${data.urgencia}` : ''}
+${data.diasSemana && data.diasSemana.length > 0 ? `📅 *Dias da Semana:* ${data.diasSemana.join(', ')}` : ''}
 ${data.observacoes ? `📝 *Observações:* ${data.observacoes}` : ''}
 
 Aguardo retorno para mais informações sobre o serviço de home care. Obrigado!`;
