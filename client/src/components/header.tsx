@@ -18,6 +18,13 @@ export default function Header() {
     const element = document.getElementById('contato');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Small delay to ensure proper positioning at the start
+      setTimeout(() => {
+        window.scrollTo({
+          top: element.offsetTop - 80, // Offset for fixed header
+          behavior: 'smooth'
+        });
+      }, 100);
     }
   };
 
