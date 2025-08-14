@@ -39,7 +39,6 @@ export default function Header() {
               <h1 className="text-lg md:text-xl font-bold text-neutral-900 leading-tight tracking-tight">
                 <span className="bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent text-[22px]">VIDA MELHOR HOME CARE</span>
               </h1>
-              <p className="text-xs md:text-sm font-semibold text-neutral-600 -mt-0.5 tracking-wide">Home Care</p>
             </div>
           </div>
           
