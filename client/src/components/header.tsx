@@ -1,4 +1,5 @@
-import { Heart, Menu, X, Shield, Stethoscope, Plus } from "lucide-react";
+import { Heart, Menu, X, Shield, Stethoscope, Plus, Phone } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -27,27 +28,31 @@ export default function Header() {
           <div className="flex items-center cursor-pointer group" onClick={() => scrollToSection('inicio')}>
             <div className="relative mr-3 md:mr-4">
               {/* Professional Medical Logo */}
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary via-blue-600 to-secondary rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center relative overflow-hidden">
-                {/* Medical Cross Background */}
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center relative overflow-hidden">
+                {/* Sophisticated geometric pattern */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-6 md:w-8 h-1.5 md:h-2 bg-white/20 rounded-full"></div>
-                  <div className="w-1.5 md:w-2 h-6 md:h-8 bg-white/20 rounded-full absolute"></div>
+                  <div className="w-full h-full bg-gradient-to-tr from-white/10 to-white/5 rounded-2xl"></div>
+                  <div className="absolute w-8 h-0.5 bg-white/20 rounded-full transform rotate-45"></div>
+                  <div className="absolute w-8 h-0.5 bg-white/20 rounded-full transform -rotate-45"></div>
                 </div>
-                {/* Main Icon */}
+                {/* Main medical symbol */}
                 <div className="relative z-10 flex items-center justify-center">
-                  <Heart className="text-white text-base md:text-lg font-bold" fill="currentColor" />
+                  <div className="flex items-center justify-center">
+                    <Shield className="text-white text-base md:text-lg" />
+                    <Heart className="text-white text-xs absolute" fill="currentColor" />
+                  </div>
                 </div>
-                {/* Small accent */}
-                <div className="absolute top-1 right-1 w-1.5 md:w-2 h-1.5 md:h-2 bg-white/40 rounded-full"></div>
-                {/* Professional border ring */}
-                <div className="absolute inset-0 rounded-xl ring-1 ring-white/30"></div>
+                {/* Professional corner accent */}
+                <div className="absolute top-0.5 right-0.5 w-1 h-1 md:w-1.5 md:h-1.5 bg-white/50 rounded-full"></div>
+                {/* Subtle border */}
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-white/20"></div>
               </div>
             </div>
             <div className="flex flex-col">
-              <h1 className="text-lg md:text-xl font-bold text-neutral-900 leading-tight">
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Home Care</span>
+              <h1 className="text-lg md:text-xl font-bold text-neutral-900 leading-tight tracking-tight">
+                <span className="bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent">HOME CARE</span>
               </h1>
-              <p className="text-xs md:text-sm font-semibold text-neutral-600 -mt-1">Vida Melhor</p>
+              <p className="text-xs md:text-sm font-bold text-neutral-700 -mt-0.5 tracking-wide">VIDA MELHOR</p>
             </div>
           </div>
           
@@ -55,34 +60,35 @@ export default function Header() {
           <div className="hidden md:flex space-x-2">
             <button 
               onClick={() => scrollToSection('inicio')}
-              className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-primary transition-all duration-300 font-medium"
+              className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-primary transition-all duration-300 font-semibold tracking-wide"
               data-testid="nav-inicio"
             >
-              Início
+              INÍCIO
             </button>
             <button 
               onClick={() => scrollToSection('servicos')}
-              className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-primary transition-all duration-300 font-medium"
+              className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-primary transition-all duration-300 font-semibold tracking-wide"
               data-testid="nav-servicos"
             >
-              Serviços
+              SERVIÇOS
             </button>
             <button 
               onClick={() => scrollToSection('diferenciais')}
-              className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-primary transition-all duration-300 font-medium"
+              className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-primary transition-all duration-300 font-semibold tracking-wide"
               data-testid="nav-diferenciais"
             >
-              Diferenciais
+              DIFERENCIAIS
             </button>
           </div>
           
           <div className="flex items-center space-x-4">
             <Button 
               onClick={scrollToForm}
-              className="bg-gradient-to-r from-secondary to-secondary/90 hover:from-secondary/90 hover:to-secondary text-white shadow-lg hover:shadow-xl transition-all duration-300 hidden md:flex font-medium px-6 py-2 rounded-full"
+              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 hidden md:flex font-semibold px-6 py-2 rounded-full tracking-wide"
               data-testid="button-form-header"
             >
-              <span className="mr-2">📱</span>Solicitar Orçamento
+              <SiWhatsapp className="mr-2 text-lg" />
+              SOLICITAR ORÇAMENTO
             </Button>
             
             {/* Mobile Menu Button */}
@@ -102,31 +108,32 @@ export default function Header() {
             <div className="flex flex-col space-y-3">
               <button 
                 onClick={() => scrollToSection('inicio')}
-                className="text-left px-4 py-2 rounded-lg text-neutral-600 hover:text-primary hover:bg-primary/10 transition-all duration-300 font-medium"
+                className="text-left px-4 py-2 rounded-lg text-neutral-600 hover:text-primary hover:bg-primary/10 transition-all duration-300 font-semibold tracking-wide"
                 data-testid="nav-mobile-inicio"
               >
-                Início
+                INÍCIO
               </button>
               <button 
                 onClick={() => scrollToSection('servicos')}
-                className="text-left px-4 py-2 rounded-lg text-neutral-600 hover:text-primary hover:bg-primary/10 transition-all duration-300 font-medium"
+                className="text-left px-4 py-2 rounded-lg text-neutral-600 hover:text-primary hover:bg-primary/10 transition-all duration-300 font-semibold tracking-wide"
                 data-testid="nav-mobile-servicos"
               >
-                Serviços
+                SERVIÇOS
               </button>
               <button 
                 onClick={() => scrollToSection('diferenciais')}
-                className="text-left px-4 py-2 rounded-lg text-neutral-600 hover:text-primary hover:bg-primary/10 transition-all duration-300 font-medium"
+                className="text-left px-4 py-2 rounded-lg text-neutral-600 hover:text-primary hover:bg-primary/10 transition-all duration-300 font-semibold tracking-wide"
                 data-testid="nav-mobile-diferenciais"
               >
-                Diferenciais
+                DIFERENCIAIS
               </button>
               <Button 
                 onClick={scrollToForm}
-                className="bg-gradient-to-r from-secondary to-secondary/90 hover:from-secondary/90 hover:to-secondary text-white shadow-lg hover:shadow-xl transition-all duration-300 justify-start font-medium rounded-full mt-2"
+                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 justify-start font-semibold rounded-full mt-2 tracking-wide"
                 data-testid="button-form-mobile"
               >
-                <span className="mr-2">📱</span>Solicitar Orçamento
+                <SiWhatsapp className="mr-2 text-lg" />
+                SOLICITAR ORÇAMENTO
               </Button>
             </div>
           </div>
