@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { useEffect } from 'react';
 import cuidadorIdosoImg from "@assets/saiba-mais-sobre-o-curso-de-cuidador-de-idosos_1755170368390.jpg";
+import cuidadorEnfermeiraImg from "@assets/img20200108121426396-768x513_1755170871058.jpg";
 
 export default function HeroSection() {
   const scrollToForm = () => {
@@ -29,8 +30,8 @@ export default function HeroSection() {
       alt: "Cuidador profissional auxiliando idoso com exercícios de reabilitação em casa"
     },
     {
-      src: "https://images.unsplash.com/photo-1576673442511-7e39b6545c87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600",
-      alt: "Cuidadora dedicada auxiliando paciente idosa em cadeira de rodas em ambiente domiciliar acolhedor"
+      src: cuidadorEnfermeiraImg,
+      alt: "Enfermeira profissional auxiliando idoso com andador em ambiente domiciliar seguro"
     }
   ];
 
@@ -48,7 +49,7 @@ export default function HeroSection() {
                   <img 
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-[250px] lg:h-[320px] object-cover object-center"
+                    className={`w-full h-[250px] lg:h-[320px] object-cover ${index === 2 ? 'object-top' : 'object-center'}`}
                     data-testid={`img-hero-${index}`}
                   />
                 </div>
