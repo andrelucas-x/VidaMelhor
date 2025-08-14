@@ -11,19 +11,14 @@ export interface WhatsAppFormData {
 }
 
 export function formatWhatsAppMessage(data: WhatsAppFormData): string {
-  const message = `🏥 *Solicitação de Orçamento - Home Care Vida Melhor*
+  const message = `🏥 *Solicitação de Orçamento - Vida Melhor Home Care*
 
 👤 *Responsável:* ${data.responsavelNome}
 📱 *Telefone:* ${data.telefone}
 👥 *Idade do Paciente:* ${data.idadePaciente}
 🩺 *Tipo de Cuidado:* ${data.tipoCuidado}
-${data.comorbidades ? `🏥 *Comorbidades:* ${data.comorbidades}` : ''}
-${data.horarioPreferencial ? `⏰ *Horário Preferencial:* ${data.horarioPreferencial}` : ''}
-${data.urgencia ? `⚡ *Urgência:* ${data.urgencia}` : ''}
-${data.diasSemana && data.diasSemana.length > 0 ? `📅 *Dias da Semana:* ${data.diasSemana.join(', ')}` : ''}
-${data.observacoes ? `📝 *Observações:* ${data.observacoes}` : ''}
 
-Aguardo retorno para mais informações sobre o serviço de home care. Obrigado!`;
+Gostaria de receber mais informações sobre os serviços de home care. Aguardo contato!`;
 
   return message;
 }
