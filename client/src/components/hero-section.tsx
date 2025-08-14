@@ -28,8 +28,8 @@ export default function HeroSection() {
       alt: "Cuidador profissional auxiliando idoso com exercícios de reabilitação em casa"
     },
     {
-      src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      alt: "Enfermeira dedicada verificando medicação de paciente idoso com cuidado e atenção"
+      src: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      alt: "Cuidadora carinhosa conversando e oferecendo suporte emocional para senhora idosa em casa"
     }
   ];
 
