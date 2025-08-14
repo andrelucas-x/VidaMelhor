@@ -92,7 +92,7 @@ export default function ServicesSection() {
 
         {/* Additional Services */}
         <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-8 rounded-2xl" data-testid="section-servicos-inclusos">
-          <h4 className="text-2xl font-semibold text-neutral-900 mb-6 text-center" data-testid="title-servicos-inclusos">Serviços Inclusos</h4>
+          <h4 className="text-2xl font-semibold text-neutral-900 mb-6 text-center" data-testid="title-servicos-inclusos">SERVIÇOS INCLUSOS</h4>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-center space-x-3" data-testid="servico-refeicoes">
               <Utensils className="text-primary" />
