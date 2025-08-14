@@ -34,12 +34,7 @@ export default function PreQualificationForm() {
       responsavelNome: "",
       telefone: "",
       idadePaciente: "",
-      tipoCuidado: "",
-      comorbidades: "",
-      horarioPreferencial: undefined,
-      urgencia: undefined,
-      diasSemana: undefined,
-      observacoes: ""
+      tipoCuidado: ""
     }
   });
 
@@ -47,14 +42,12 @@ export default function PreQualificationForm() {
     setIsSubmitting(true);
     
     try {
-      // Prepare data for WhatsApp, ensuring empty values become undefined
+      // Prepare data for WhatsApp with only the essential fields
       const whatsappData = {
-        ...data,
-        comorbidades: data.comorbidades || undefined,
-        observacoes: data.observacoes || undefined,
-        horarioPreferencial: data.horarioPreferencial || undefined,
-        urgencia: data.urgencia || undefined,
-        diasSemana: data.diasSemana && data.diasSemana.length > 0 ? data.diasSemana : undefined
+        responsavelNome: data.responsavelNome,
+        telefone: data.telefone,
+        idadePaciente: data.idadePaciente,
+        tipoCuidado: data.tipoCuidado
       };
       
       // Redirect to WhatsApp with formatted message
@@ -183,151 +176,6 @@ export default function PreQualificationForm() {
                   )}
                 />
               </div>
-
-              <FormField
-                control={form.control}
-                name="comorbidades"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel data-testid="label-comorbidades">Comorbidades Específicas do Paciente (opcional)</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Descreva as condições de saúde específicas que requerem atenção..."
-                        {...field}
-                        value={field.value || ""}
-                        data-testid="textarea-comorbidades"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <FormField
-                  control={form.control}
-                  name="horarioPreferencial"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel data-testid="label-horario">Horário Preferencial (opcional)</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger data-testid="select-horario">
-                            <SelectValue placeholder="Selecione o horário" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="manha">Manhã (6h às 12h)</SelectItem>
-                          <SelectItem value="tarde">Tarde (12h às 18h)</SelectItem>
-                          <SelectItem value="noite">Noite (18h às 24h)</SelectItem>
-                          <SelectItem value="madrugada">Madrugada (0h às 6h)</SelectItem>
-                          <SelectItem value="12h-dia">12 horas - Dia</SelectItem>
-                          <SelectItem value="12h-noite">12 horas - Noite</SelectItem>
-                          <SelectItem value="24h">24 horas</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="urgencia"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel data-testid="label-urgencia">Quando precisa iniciar? (opcional)</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger data-testid="select-urgencia">
-                            <SelectValue placeholder="Selecione a urgência" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="hoje">Hoje</SelectItem>
-                          <SelectItem value="amanha">Amanhã</SelectItem>
-                          <SelectItem value="esta-semana">Esta semana</SelectItem>
-                          <SelectItem value="proxima-semana">Próxima semana</SelectItem>
-                          <SelectItem value="este-mes">Este mês</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <FormField
-                control={form.control}
-                name="diasSemana"
-                render={() => (
-                  <FormItem>
-                    <div className="mb-4">
-                      <FormLabel className="text-base" data-testid="label-dias-semana">
-                        Dias da Semana Necessários (opcional)
-                      </FormLabel>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
-                      {diasSemana.map((dia) => (
-                        <FormField
-                          key={dia.id}
-                          control={form.control}
-                          name="diasSemana"
-                          render={({ field }) => {
-                            return (
-                              <FormItem
-                                key={dia.id}
-                                className="flex flex-row items-center space-x-3 space-y-0 bg-neutral-50 p-3 rounded-lg hover:bg-neutral-100 transition-colors"
-                              >
-                                <FormControl>
-                                  <Checkbox
-                                    checked={field.value?.includes(dia.id)}
-                                    onCheckedChange={(checked) => {
-                                      const currentValue = field.value || [];
-                                      return checked
-                                        ? field.onChange([...currentValue, dia.id])
-                                        : field.onChange(
-                                            currentValue.filter(
-                                              (value) => value !== dia.id
-                                            )
-                                          )
-                                    }}
-                                    data-testid={`checkbox-${dia.id}`}
-                                  />
-                                </FormControl>
-                                <FormLabel className="text-sm font-normal cursor-pointer">
-                                  {dia.label}
-                                </FormLabel>
-                              </FormItem>
-                            )
-                          }}
-                        />
-                      ))}
-                    </div>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="observacoes"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel data-testid="label-observacoes">Observações Adicionais (opcional)</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Conte-nos mais sobre as necessidades específicas, rotina do paciente, medicamentos, ou qualquer informação relevante..."
-                        rows={4}
-                        {...field}
-                        value={field.value || ""}
-                        data-testid="textarea-observacoes"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
 
               <div className="text-center">
                 <Button 
