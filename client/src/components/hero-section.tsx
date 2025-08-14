@@ -1,6 +1,9 @@
 import { ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiWhatsapp } from "react-icons/si";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { useEffect } from 'react';
 
 export default function HeroSection() {
   const scrollToForm = () => {
@@ -9,6 +12,26 @@ export default function HeroSection() {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+  );
+
+  const carouselImages = [
+    {
+      src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      alt: "Cuidadora sorrindo enquanto ajuda idosa com carinho em ambiente domiciliar aconchegante"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      alt: "Cuidador profissional auxiliando idoso com exercícios de reabilitação em casa"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      alt: "Enfermeira dedicada verificando medicação de paciente idoso com cuidado e atenção"
+    }
+  ];
 
 
 
@@ -38,12 +61,20 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Cuidadora sorrindo enquanto ajuda idosa com carinho em ambiente domiciliar aconchegante" 
-              className="rounded-2xl shadow-2xl w-full h-auto"
-              data-testid="img-hero"
-            />
+            <div className="overflow-hidden rounded-2xl shadow-2xl" ref={emblaRef} data-testid="carousel-hero">
+              <div className="flex">
+                {carouselImages.map((image, index) => (
+                  <div key={index} className="flex-[0_0_100%] min-w-0">
+                    <img 
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-[400px] lg:h-[500px] object-cover"
+                      data-testid={`img-hero-${index}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-emerald-100">
               <div className="flex items-center space-x-4">
                 <div className="bg-gradient-to-br from-emerald-100 to-teal-100 p-3 rounded-full">
