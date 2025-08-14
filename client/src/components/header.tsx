@@ -29,16 +29,8 @@ export default function Header() {
             <div className="relative mr-3 md:mr-4">
               {/* Clean Medical Logo */}
               <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center relative">
-                {/* Stethoscope as main element with small heart */}
-                <div className="relative w-full h-full flex items-center justify-center">
-                  {/* Main stethoscope icon */}
-                  <Stethoscope className="text-white text-lg md:text-xl" />
-                  
-                  {/* Small heart accent positioned at top-right */}
-                  <div className="absolute -top-1 -right-1 w-3 h-3 md:w-4 md:h-4 bg-emerald-500 rounded-full flex items-center justify-center">
-                    <Heart className="text-white text-xs" fill="currentColor" />
-                  </div>
-                </div>
+                {/* Simple stethoscope logo */}
+                <Stethoscope className="text-white text-xl md:text-2xl" />
                 {/* Clean highlight */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-2xl"></div>
               </div>
