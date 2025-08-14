@@ -50,7 +50,7 @@ export default function HeroSection() {
                   <img 
                     src={image.src}
                     alt={image.alt}
-                    className={`w-full h-[250px] lg:h-[320px] object-cover ${index === 2 ? 'object-[50%_20%]' : 'object-center'}`}
+                    className={`w-full h-[250px] lg:h-[320px] object-cover ${index === 1 ? 'object-[50%_40%]' : index === 2 ? 'object-[50%_20%]' : 'object-center'}`}
                     data-testid={`img-hero-${index}`}
                   />
                 </div>
