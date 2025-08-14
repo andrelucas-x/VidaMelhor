@@ -38,12 +38,9 @@ export default function DifferentialsSection() {
     <section id="diferenciais" className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <Heart className="text-secondary mr-3 text-2xl" />
-            <h3 className="lg:text-4xl font-bold text-neutral-900 tracking-tight text-[30px]" data-testid="title-diferenciais">
-              NOSSO CUIDADO HUMANIZADO
-            </h3>
-          </div>
+          <h3 className="lg:text-4xl font-bold text-neutral-900 tracking-tight text-[30px] mb-4" data-testid="title-diferenciais">
+            NOSSO CUIDADO HUMANIZADO
+          </h3>
           <p className="text-xl text-neutral-500 max-w-3xl mx-auto" data-testid="subtitle-diferenciais">
             O que nos torna únicos no cuidado domiciliar especializado, dedicado e humanizado.
           </p>
