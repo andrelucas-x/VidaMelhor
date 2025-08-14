@@ -26,6 +26,9 @@ export default function Footer() {
             <p className="text-neutral-400 mb-4" data-testid="footer-description">
               Cuidado especializado e humanizado no conforto do seu lar.
             </p>
+            <p className="text-neutral-400 text-sm" data-testid="footer-area-atendimento">
+              Atendemos Curitiba e região metropolitana.
+            </p>
             
           </div>
 
