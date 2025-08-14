@@ -79,9 +79,7 @@ export default function PreQualificationForm() {
           <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4 tracking-tight" data-testid="title-formulario">
             SOLICITE SEU ORÇAMENTO PERSONALIZADO
           </h3>
-          <p className="text-xl text-neutral-500" data-testid="subtitle-formulario">
-            Preencha o formulário abaixo e entraremos em contato via WhatsApp com uma proposta personalizada.
-          </p>
+          <p className="text-xl text-neutral-500" data-testid="subtitle-formulario">Preencha o breve formulário abaixo e conversaremos sobre uma proposta personalizada.</p>
         </div>
 
         <div className="bg-white p-8 rounded-2xl shadow-lg">
