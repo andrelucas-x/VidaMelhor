@@ -6,6 +6,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import { useEffect } from 'react';
 import cuidadorIdosoImg from "@assets/saiba-mais-sobre-o-curso-de-cuidador-de-idosos_1755170368390.jpg";
 import cuidadorEnfermeiraImg from "@assets/img20200108121426396-768x513_1755170871058.jpg";
+import cuidadoresIdososImg from "@assets/cuidadores-de-idosos_1755171125430.png";
 
 export default function HeroSection() {
   const scrollToForm = () => {
@@ -26,8 +27,8 @@ export default function HeroSection() {
       alt: "Cuidadora sorrindo enquanto ajuda idosa com carinho em ambiente domiciliar aconchegante"
     },
     {
-      src: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      alt: "Cuidador profissional auxiliando idoso com exercícios de reabilitação em casa"
+      src: cuidadoresIdososImg,
+      alt: "Cuidadoras profissionais auxiliando paciente idosa com andador em ambiente domiciliar acolhedor"
     },
     {
       src: cuidadorEnfermeiraImg,
