@@ -7,6 +7,7 @@ Home Care Vida Melhor is a modern full-stack web application for a home healthca
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Recent Changes: Unified "Nossos Diferenciais" and "Nosso Compromisso com o Cuidado Humanizado" sections into one comprehensive "Nosso Cuidado Humanizado" section (Aug 14, 2025).
 
 ## System Architecture
 

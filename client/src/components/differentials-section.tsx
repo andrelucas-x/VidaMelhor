@@ -38,11 +38,14 @@ export default function DifferentialsSection() {
     <section id="diferenciais" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h3 className="lg:text-4xl font-bold text-neutral-900 mb-4 serif tracking-tight text-[30px]" data-testid="title-diferenciais">
-            NOSSOS DIFERENCIAIS
-          </h3>
+          <div className="flex items-center justify-center mb-4">
+            <Heart className="text-secondary mr-3 text-2xl" />
+            <h3 className="lg:text-4xl font-bold text-neutral-900 serif tracking-tight text-[30px]" data-testid="title-diferenciais">
+              NOSSO CUIDADO HUMANIZADO
+            </h3>
+          </div>
           <p className="text-xl text-neutral-500 max-w-3xl mx-auto" data-testid="subtitle-diferenciais">
-            O que nos torna únicos no cuidado domiciliar especializado e humanizado.
+            O que nos torna únicos no cuidado domiciliar especializado, dedicado e humanizado.
           </p>
         </div>
 
@@ -63,6 +66,17 @@ export default function DifferentialsSection() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-secondary/10 to-primary/10 p-8 rounded-2xl">
+            <h4 className="text-2xl font-semibold text-neutral-900 mb-4 serif" data-testid="title-compromisso">NOSSO COMPROMISSO</h4>
+            <p className="text-lg text-neutral-600 max-w-4xl mx-auto" data-testid="text-compromisso">
+              Cada paciente é único e merece atenção personalizada. Nossa equipe é treinada não apenas tecnicamente, 
+              mas também para oferecer carinho, respeito e dignidade em cada interação, transformando a casa em um 
+              ambiente de cura e bem-estar.
+            </p>
           </div>
         </div>
       </div>

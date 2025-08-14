@@ -1,7 +1,6 @@
 import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
-import CareGallerySection from "@/components/care-gallery-section";
 import PreQualificationForm from "@/components/pre-qualification-form";
 import DifferentialsSection from "@/components/differentials-section";
 import Footer from "@/components/footer";
@@ -25,7 +24,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
-        <CareGallerySection />
         <DifferentialsSection />
         <PreQualificationForm />
         
