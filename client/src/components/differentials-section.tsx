@@ -38,7 +38,7 @@ export default function DifferentialsSection() {
     <section id="diferenciais" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4 serif tracking-tight" data-testid="title-diferenciais">
+          <h3 className="lg:text-4xl font-bold text-neutral-900 mb-4 serif tracking-tight text-[30px]" data-testid="title-diferenciais">
             NOSSOS DIFERENCIAIS
           </h3>
           <p className="text-xl text-neutral-500 max-w-3xl mx-auto" data-testid="subtitle-diferenciais">
