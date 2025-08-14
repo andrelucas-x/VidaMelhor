@@ -41,7 +41,7 @@ export default function Footer() {
               <li><a href="#servicos" className="hover:text-white transition-colors" data-testid="link-cuidado-idosos">Cuidado de Idosos</a></li>
               <li><a href="#servicos" className="hover:text-white transition-colors" data-testid="link-comorbidades">Pacientes com Comorbidades</a></li>
               <li><a href="#servicos" className="hover:text-white transition-colors" data-testid="link-24horas">Cuidado 24 Horas</a></li>
-              <li><a href="#servicos" className="hover:text-white transition-colors" data-testid="link-fisioterapia">Fisioterapia Domiciliar</a></li>
+              <li><a href="#servicos" className="hover:text-white transition-colors" data-testid="link-fisioterapia">Exercícios Básicos Auxiliares</a></li>
             </ul>
           </div>
 

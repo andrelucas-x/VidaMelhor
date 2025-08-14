@@ -104,7 +104,7 @@ export default function ServicesSection() {
             </div>
             <div className="flex items-center space-x-3" data-testid="servico-fisioterapia">
               <PersonStanding className="text-primary" />
-              <span className="text-neutral-700">Fisioterapia básica</span>
+              <span className="text-neutral-700">Exercícios básicos auxiliares</span>
             </div>
             <div className="flex items-center space-x-3" data-testid="servico-comunicacao">
               <Phone className="text-primary" />

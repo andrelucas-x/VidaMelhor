@@ -15,7 +15,7 @@ export default function CareGallerySection() {
     {
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       title: "Reabilitação Domiciliar",
-      description: "Fisioterapia e exercícios adaptados para cada necessidade"
+      description: "Exercícios básicos auxiliares orientados por fisioterapeuta"
     },
     {
       image: "https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
