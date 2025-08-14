@@ -37,7 +37,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <h1 className="text-lg md:text-xl font-bold text-neutral-900 leading-tight tracking-tight">
-                <span className="bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent text-[22px]">VIDA MELHOR HOME CARE</span>
+                <span className="bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent text-[22px]">VIDA MELHOR - HOME CARE</span>
               </h1>
             </div>
           </div>
