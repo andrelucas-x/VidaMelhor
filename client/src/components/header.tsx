@@ -27,25 +27,12 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center cursor-pointer group" onClick={() => scrollToSection('inicio')}>
             <div className="relative mr-3 md:mr-4">
-              {/* Professional Medical Logo */}
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center relative overflow-hidden">
-                {/* Sophisticated geometric pattern */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-full h-full bg-gradient-to-tr from-white/10 to-white/5 rounded-2xl"></div>
-                  <div className="absolute w-8 h-0.5 bg-white/20 rounded-full transform rotate-45"></div>
-                  <div className="absolute w-8 h-0.5 bg-white/20 rounded-full transform -rotate-45"></div>
-                </div>
-                {/* Main medical symbol */}
-                <div className="relative z-10 flex items-center justify-center">
-                  <div className="flex items-center justify-center">
-                    <Shield className="text-white text-base md:text-lg" />
-                    <Heart className="text-white text-xs absolute" fill="currentColor" />
-                  </div>
-                </div>
-                {/* Professional corner accent */}
-                <div className="absolute top-0.5 right-0.5 w-1 h-1 md:w-1.5 md:h-1.5 bg-white/50 rounded-full"></div>
-                {/* Subtle border */}
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-white/20"></div>
+              {/* Clean Medical Logo */}
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center relative">
+                {/* Medical Heart Icon */}
+                <Heart className="text-white text-lg md:text-xl" fill="currentColor" />
+                {/* Clean highlight */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-2xl"></div>
               </div>
             </div>
             <div className="flex flex-col">
