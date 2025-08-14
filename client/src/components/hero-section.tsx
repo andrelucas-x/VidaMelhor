@@ -13,7 +13,7 @@ export default function HeroSection() {
 
 
   return (
-    <section id="inicio" className="bg-gradient-to-br from-primary/10 to-secondary/10 py-20">
+    <section id="inicio" className="bg-gradient-to-br from-primary/10 to-secondary/10 py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

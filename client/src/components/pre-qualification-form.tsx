@@ -73,9 +73,9 @@ export default function PreQualificationForm() {
   };
 
   return (
-    <section id="contato" className="py-20 bg-neutral-50">
+    <section id="contato" className="py-14 bg-neutral-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4 tracking-tight" data-testid="title-formulario">
             SOLICITE SEU ORÇAMENTO PERSONALIZADO
           </h3>

@@ -35,9 +35,9 @@ export default function DifferentialsSection() {
   ];
 
   return (
-    <section id="diferenciais" className="py-20 bg-white">
+    <section id="diferenciais" className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <Heart className="text-secondary mr-3 text-2xl" />
             <h3 className="lg:text-4xl font-bold text-neutral-900 tracking-tight text-[30px]" data-testid="title-diferenciais">
@@ -69,7 +69,7 @@ export default function DifferentialsSection() {
           </div>
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-secondary/10 to-primary/10 p-8 rounded-2xl">
             <h4 className="text-neutral-900 mb-4 text-[30px] font-bold" data-testid="title-compromisso">NOSSO COMPROMISSO</h4>
             <p className="text-lg text-neutral-600 max-w-4xl mx-auto" data-testid="text-compromisso">

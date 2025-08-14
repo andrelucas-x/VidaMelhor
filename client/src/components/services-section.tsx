@@ -2,9 +2,9 @@ import { Users, HeartPulse, Clock, Utensils, Pill, PersonStanding, Phone, Check 
 
 export default function ServicesSection() {
   return (
-    <section id="servicos" className="py-20 bg-white">
+    <section id="servicos" className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4 tracking-tight" data-testid="title-servicos">
             NOSSOS SERVIÇOS ESPECIALIZADOS
           </h3>
@@ -13,7 +13,7 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Service Card 1 */}
           <div className="bg-neutral-50 p-8 rounded-2xl hover:shadow-lg transition-shadow" data-testid="card-cuidado-idosos">
             <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
