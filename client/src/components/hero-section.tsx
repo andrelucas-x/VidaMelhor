@@ -1,5 +1,6 @@
 import { ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SiWhatsapp } from "react-icons/si";
 
 export default function HeroSection() {
   const scrollToForm = () => {
@@ -16,9 +17,9 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
-              Cuidado especializado no{" "}
-              <span className="text-primary">conforto do seu lar</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6 tracking-tight">
+              CUIDADO ESPECIALIZADO NO{" "}
+              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">CONFORTO DO SEU LAR</span>
             </h2>
             <p className="text-xl text-neutral-500 mb-8 leading-relaxed">
               Oferecemos serviços de home care com cuidadores qualificados para idosos e pacientes com comorbidades, 
@@ -28,11 +29,11 @@ export default function HeroSection() {
               <Button 
                 onClick={scrollToForm}
                 size="lg" 
-                className="bg-secondary text-white hover:bg-secondary/90 text-lg font-semibold px-8 py-4"
+                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-lg font-bold px-8 py-4 tracking-wide"
                 data-testid="button-solicitar-orcamento"
               >
-                <span className="mr-2">📱</span>
-                Preencher Dados e Falar no WhatsApp
+                <SiWhatsapp className="mr-3 text-xl" />
+                PREENCHER DADOS E FALAR NO WHATSAPP
               </Button>
             </div>
           </div>
@@ -43,14 +44,16 @@ export default function HeroSection() {
               className="rounded-2xl shadow-2xl w-full h-auto"
               data-testid="img-hero"
             />
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-emerald-100">
               <div className="flex items-center space-x-4">
-                <div className="bg-secondary/10 p-3 rounded-full">
-                  <span className="text-secondary text-xl">🛡️</span>
+                <div className="bg-gradient-to-br from-emerald-100 to-teal-100 p-3 rounded-full">
+                  <div className="w-6 h-6 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">✓</span>
+                  </div>
                 </div>
                 <div>
-                  <p className="font-semibold text-neutral-900" data-testid="text-seguranca-titulo">100% Seguro</p>
-                  <p className="text-sm text-neutral-500" data-testid="text-seguranca-descricao">Cuidadores verificados</p>
+                  <p className="font-bold text-neutral-900 tracking-wide" data-testid="text-seguranca-titulo">100% SEGURO</p>
+                  <p className="text-sm text-neutral-600 font-medium" data-testid="text-seguranca-descricao">Cuidadores verificados</p>
                 </div>
               </div>
             </div>

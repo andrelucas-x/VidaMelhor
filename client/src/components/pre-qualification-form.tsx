@@ -11,6 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { insertPreQualificationSchema } from "@shared/schema";
 import { redirectToWhatsApp } from "@/lib/whatsapp";
 import { useToast } from "@/hooks/use-toast";
+import { SiWhatsapp } from "react-icons/si";
 import type { InsertPreQualification } from "@shared/schema";
 
 const diasSemana = [
@@ -79,8 +80,8 @@ export default function PreQualificationForm() {
     <section id="contato" className="py-20 bg-neutral-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4" data-testid="title-formulario">
-            Solicite seu Orçamento Personalizado
+          <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4 tracking-tight" data-testid="title-formulario">
+            SOLICITE SEU ORÇAMENTO PERSONALIZADO
           </h3>
           <p className="text-xl text-neutral-500" data-testid="subtitle-formulario">
             Preencha o formulário abaixo e entraremos em contato via WhatsApp com uma proposta personalizada.
@@ -329,11 +330,11 @@ export default function PreQualificationForm() {
                   type="submit" 
                   size="lg"
                   disabled={isSubmitting}
-                  className="bg-secondary text-white hover:bg-secondary/90 text-lg font-semibold px-12 py-4"
+                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-lg font-bold px-12 py-4 tracking-wide"
                   data-testid="button-enviar-whatsapp"
                 >
-                  <span className="mr-3">📱</span>
-                  {isSubmitting ? 'Enviando...' : 'Enviar via WhatsApp'}
+                  <SiWhatsapp className="mr-3 text-xl" />
+                  {isSubmitting ? 'ENVIANDO...' : 'ENVIAR VIA WHATSAPP'}
                 </Button>
                 <p className="text-sm text-neutral-500 mt-4" data-testid="text-aviso-whatsapp">
                   Ao enviar, você será redirecionado para o WhatsApp com suas informações preenchidas.

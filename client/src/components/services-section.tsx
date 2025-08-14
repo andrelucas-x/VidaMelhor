@@ -5,8 +5,8 @@ export default function ServicesSection() {
     <section id="servicos" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4" data-testid="title-servicos">
-            Nossos Serviços Especializados
+          <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 mb-4 tracking-tight" data-testid="title-servicos">
+            NOSSOS SERVIÇOS ESPECIALIZADOS
           </h3>
           <p className="text-xl text-neutral-500 max-w-3xl mx-auto" data-testid="subtitle-servicos">
             Oferecemos cuidados personalizados para diferentes necessidades, sempre com profissionais qualificados e experientes.
