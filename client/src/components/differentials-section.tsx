@@ -71,7 +71,7 @@ export default function DifferentialsSection() {
 
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-secondary/10 to-primary/10 p-8 rounded-2xl">
-            <h4 className="text-2xl font-semibold text-neutral-900 mb-4" data-testid="title-compromisso">NOSSO COMPROMISSO</h4>
+            <h4 className="text-neutral-900 mb-4 text-[30px] font-bold" data-testid="title-compromisso">NOSSO COMPROMISSO</h4>
             <p className="text-lg text-neutral-600 max-w-4xl mx-auto" data-testid="text-compromisso">
               Cada paciente é único e merece atenção personalizada. Nossa equipe é treinada não apenas tecnicamente, 
               mas também para oferecer carinho, respeito e dignidade em cada interação, transformando a casa em um 
