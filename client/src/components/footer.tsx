@@ -62,10 +62,10 @@ export default function Footer() {
           <div data-testid="footer-schedule">
             <h5 className="font-semibold mb-4">Horário de Atendimento</h5>
             <ul className="space-y-2 text-neutral-400">
-              <li data-testid="text-horario-semana">Segunda a Sexta: 24h</li>
-              <li data-testid="text-horario-fds">Fins de Semana: 24h</li>
-              <li data-testid="text-horario-feriado">Feriados: 24h</li>
-              <li className="text-secondary font-medium" data-testid="text-atendimento-continuo">Atendimento Contínuo</li>
+              <li data-testid="text-servico-24h" className="text-secondary font-medium">Serviços: 24h todos os dias</li>
+              <li data-testid="text-whatsapp-horario">WhatsApp: 8h às 20h</li>
+              <li data-testid="text-whatsapp-dias">Todos os dias da semana</li>
+              <li data-testid="text-whatsapp-feriados">Incluindo feriados</li>
             </ul>
           </div>
         </div>
