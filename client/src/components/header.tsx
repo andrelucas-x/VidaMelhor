@@ -29,24 +29,14 @@ export default function Header() {
             <div className="relative mr-3 md:mr-4">
               {/* Clean Medical Logo */}
               <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center relative">
-                {/* Heart and Stethoscope Design */}
+                {/* Stethoscope as main element with small heart */}
                 <div className="relative w-full h-full flex items-center justify-center">
-                  {/* Central heart */}
-                  <Heart className="text-white text-sm md:text-base z-10" fill="currentColor" />
+                  {/* Main stethoscope icon */}
+                  <Stethoscope className="text-white text-lg md:text-xl" />
                   
-                  {/* Stethoscope curve around heart - left side */}
-                  <div className="absolute left-1 top-1/2 transform -translate-y-1/2">
-                    <div className="w-1 h-3 md:w-1.5 md:h-4 bg-white rounded-full transform rotate-12"></div>
-                  </div>
-                  
-                  {/* Stethoscope curve around heart - right side */}
-                  <div className="absolute right-1 top-1/2 transform -translate-y-1/2">
-                    <div className="w-1 h-3 md:w-1.5 md:h-4 bg-white rounded-full transform -rotate-12"></div>
-                  </div>
-                  
-                  {/* Stethoscope chest piece */}
-                  <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2">
-                    <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
+                  {/* Small heart accent positioned at top-right */}
+                  <div className="absolute -top-1 -right-1 w-3 h-3 md:w-4 md:h-4 bg-emerald-500 rounded-full flex items-center justify-center">
+                    <Heart className="text-white text-xs" fill="currentColor" />
                   </div>
                 </div>
                 {/* Clean highlight */}
