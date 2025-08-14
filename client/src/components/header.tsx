@@ -29,8 +29,13 @@ export default function Header() {
             <div className="relative mr-3 md:mr-4">
               {/* Clean Medical Logo */}
               <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center relative">
-                {/* Medical Heart Icon */}
-                <Heart className="text-white text-lg md:text-xl" fill="currentColor" />
+                {/* Stethoscope and Heart Combination */}
+                <div className="relative flex items-center justify-center">
+                  {/* Main stethoscope icon */}
+                  <Stethoscope className="text-white text-base md:text-lg" />
+                  {/* Small heart accent */}
+                  <Heart className="text-white text-xs absolute -top-0.5 -right-0.5" fill="currentColor" />
+                </div>
                 {/* Clean highlight */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-2xl"></div>
               </div>
