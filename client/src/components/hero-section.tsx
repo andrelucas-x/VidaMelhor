@@ -29,8 +29,8 @@ export default function HeroSection() {
       alt: "Cuidador profissional auxiliando idoso com exercícios de reabilitação em casa"
     },
     {
-      src: cuidadorIdosoImg,
-      alt: "Cuidador profissional ajudando senhora idosa a se levantar com cuidado e atenção em ambiente domiciliar"
+      src: "https://images.unsplash.com/photo-1576673442511-7e39b6545c87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600",
+      alt: "Cuidadora dedicada auxiliando paciente idosa em cadeira de rodas em ambiente domiciliar acolhedor"
     }
   ];
 
