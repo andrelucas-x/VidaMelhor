@@ -19,7 +19,7 @@ export default function Footer() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-2xl"></div>
               </div>
               <div className="flex flex-col">
-                <h4 className="text-xl font-bold">Vida Melhor</h4>
+                <h4 className="text-xl font-bold">VIDA MELHOR</h4>
                 <p className="text-sm font-semibold text-neutral-400 -mt-1">Home Care</p>
               </div>
             </div>
