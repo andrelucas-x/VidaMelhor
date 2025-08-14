@@ -26,13 +26,7 @@ export default function Footer() {
             <p className="text-neutral-400 mb-4" data-testid="footer-description">
               Cuidado especializado e humanizado no conforto do seu lar.
             </p>
-            <div className="flex space-x-4">
-              <Facebook className="text-xl text-neutral-400 hover:text-primary cursor-pointer transition-colors" data-testid="icon-facebook" />
-              <Instagram className="text-xl text-neutral-400 hover:text-primary cursor-pointer transition-colors" data-testid="icon-instagram" />
-              <button onClick={scrollToForm}>
-                <span className="text-xl text-neutral-400 hover:text-secondary cursor-pointer transition-colors" data-testid="icon-form-footer">📱</span>
-              </button>
-            </div>
+            
           </div>
 
           <div data-testid="footer-services">
