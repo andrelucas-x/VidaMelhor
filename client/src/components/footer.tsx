@@ -1,4 +1,4 @@
-import { Heart, Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Heart, Facebook, Instagram, Phone, Mail, MapPin, Stethoscope } from "lucide-react";
 
 export default function Footer() {
   const scrollToForm = () => {
@@ -14,7 +14,10 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div data-testid="footer-brand">
             <div className="flex items-center mb-4">
-              <Heart className="text-primary text-2xl mr-3" />
+              <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl shadow-lg flex items-center justify-center relative mr-3">
+                <Stethoscope className="text-white text-xl" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-2xl"></div>
+              </div>
               <h4 className="text-xl font-bold">Home Care Vida Melhor</h4>
             </div>
             <p className="text-neutral-400 mb-4" data-testid="footer-description">
