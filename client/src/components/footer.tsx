@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-neutral-800 pt-8 mt-8 text-center text-neutral-400" data-testid="footer-copyright">
-          <p>&copy; 2024 Home Care Vida Melhor. Todos os direitos reservados.</p>
+          <p>© 2024 Vida Melhor Home Care. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
