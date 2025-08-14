@@ -30,7 +30,7 @@ export default function CareGallerySection() {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
             <Heart className="text-secondary mr-3 text-2xl" />
-            <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900 serif" data-testid="title-galeria">
+            <h3 className="text-3xl lg:text-4xl font-bold text-neutral-900" data-testid="title-galeria">
               Nosso Cuidado em Ação
             </h3>
           </div>
@@ -50,7 +50,7 @@ export default function CareGallerySection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <h4 className="font-semibold mb-1 serif" data-testid={`title-galeria-${index}`}>
+                <h4 className="font-semibold mb-1" data-testid={`title-galeria-${index}`}>
                   {item.title}
                 </h4>
                 <p className="text-sm opacity-90" data-testid={`desc-galeria-${index}`}>
@@ -63,7 +63,7 @@ export default function CareGallerySection() {
 
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-2xl">
-            <h4 className="text-2xl font-semibold text-neutral-900 mb-4 serif" data-testid="title-compromisso">NOSSO COMPROMISSO COM O CUIDADO HUMANIZADO</h4>
+            <h4 className="text-2xl font-semibold text-neutral-900 mb-4" data-testid="title-compromisso">NOSSO COMPROMISSO COM O CUIDADO HUMANIZADO</h4>
             <p className="text-lg text-neutral-600 max-w-4xl mx-auto" data-testid="text-compromisso">
               Cada paciente é único e merece atenção personalizada. Nossa equipe é treinada não apenas tecnicamente, 
               mas também para oferecer carinho, respeito e dignidade em cada interação, transformando a casa em um 
