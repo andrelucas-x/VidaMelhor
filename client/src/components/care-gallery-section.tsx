@@ -63,9 +63,7 @@ export default function CareGallerySection() {
 
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-2xl">
-            <h4 className="text-2xl font-semibold text-neutral-900 mb-4 serif" data-testid="title-compromisso">
-              Nosso Compromisso com o Cuidado Humanizado
-            </h4>
+            <h4 className="text-2xl font-semibold text-neutral-900 mb-4 serif" data-testid="title-compromisso">NOSSO COMPROMISSO COM O CUIDADO HUMANIZADO</h4>
             <p className="text-lg text-neutral-600 max-w-4xl mx-auto" data-testid="text-compromisso">
               Cada paciente é único e merece atenção personalizada. Nossa equipe é treinada não apenas tecnicamente, 
               mas também para oferecer carinho, respeito e dignidade em cada interação, transformando a casa em um 
