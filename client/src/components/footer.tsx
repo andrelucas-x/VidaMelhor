@@ -53,12 +53,8 @@ export default function Footer() {
                 <span data-testid="text-telefone">(41) 99625-4624</span>
               </li>
               <li className="flex items-center">
-                <Mail className="mr-2" size={16} />
-                <span data-testid="text-email">contato@vidamelhor.com.br</span>
-              </li>
-              <li className="flex items-center">
                 <MapPin className="mr-2" size={16} />
-                <span data-testid="text-endereco">São Paulo, SP</span>
+                <span data-testid="text-endereco">Curitiba, Paraná</span>
               </li>
             </ul>
           </div>
