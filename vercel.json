@@ -7,7 +7,7 @@
     },
     {
       "src": "package.json",
-      "use": "@vercel/next" // ou "@vercel/node" dependendo do framework
+      "use": "@vercel/next"
     }
   ],
   "routes": [
