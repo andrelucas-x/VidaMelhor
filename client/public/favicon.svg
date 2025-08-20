@@ -1,13 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Background with gradient matching header logo -->
+  <rect width="48" height="48" rx="12" fill="url(#gradient)"/>
   <defs>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="0%" style="stop-color:#059669"/>
       <stop offset="100%" style="stop-color:#0d9488"/>
     </linearGradient>
   </defs>
-  <path d="M23 8c0-1.1-.9-2-2-2s-2 .9-2 2-.9 2-2 2-2-.9-2-2-.9-2-2-2-2 .9-2 2v12c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V8z" fill="white" opacity="0.9"/>
-  <circle cx="8" cy="12" r="2" fill="white" opacity="0.9"/>
-  <circle cx="8" cy="20" r="2" fill="white" opacity="0.9"/>
-  <path d="M10 12h3M10 20h3" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.9"/>
+  
+  <!-- Stethoscope icon matching the header -->
+  <g transform="translate(12, 12)" fill="white">
+    <!-- Main tube -->
+    <path d="M11 2a1 1 0 0 0-1 1v5.5a3 3 0 0 0 1.5 2.6l.5.3V20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8.6l.5-.3A3 3 0 0 0 8 8.5V3a1 1 0 0 0-2 0v5.5a1 1 0 0 1-.5.9L4 10.3a1 1 0 0 0-.5.9V20a4 4 0 0 0 4 4h2a4 4 0 0 0 4-4v-8.8a1 1 0 0 0-.5-.9L11.5 9.4a1 1 0 0 1-.5-.9V3a1 1 0 0 0-1-1Z"/>
+    <!-- Chest piece -->
+    <circle cx="3" cy="18" r="3"/>
+    <circle cx="3" cy="18" r="1.5" fill="url(#gradient)"/>
+  </g>
+  
+  <!-- Highlight effect -->
+  <rect width="48" height="48" rx="12" fill="url(#highlight)" opacity="0.2"/>
+  <defs>
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="60%" y2="60%">
+      <stop offset="0%" style="stop-color:white"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </linearGradient>
+  </defs>
 </svg>
