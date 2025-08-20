@@ -31,9 +31,9 @@ export default function Header() {
   return (
     <header className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-neutral-100">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center py-4">
-          {/* Logo Section - Left aligned */}
-          <div className="flex items-center cursor-pointer group justify-start" onClick={() => scrollToSection('inicio')}>
+        <div className="flex items-center justify-between py-4 md:grid md:grid-cols-3 md:gap-8">
+          {/* Logo Section - Left aligned with fixed width */}
+          <div className="flex items-center cursor-pointer group justify-start min-w-0 flex-shrink-0" onClick={() => scrollToSection('inicio')}>
             <div className="relative mr-3">
               <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 flex items-center justify-center relative">
                 <Stethoscope className="text-white text-2xl" />
@@ -53,35 +53,35 @@ export default function Header() {
             <div className="flex space-x-1 bg-neutral-50 rounded-full p-1">
               <button 
                 onClick={() => scrollToSection('inicio')}
-                className="px-6 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-sm"
+                className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-xs"
                 data-testid="nav-inicio"
               >
                 INÍCIO
               </button>
               <button 
                 onClick={() => scrollToSection('servicos')}
-                className="px-6 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-sm"
+                className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-xs"
                 data-testid="nav-servicos"
               >
                 SERVIÇOS
               </button>
               <button 
                 onClick={() => scrollToSection('diferenciais')}
-                className="px-6 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-sm"
+                className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-xs"
                 data-testid="nav-diferenciais"
               >
                 DIFERENCIAIS
               </button>
               <button 
                 onClick={() => scrollToSection('quem-somos')}
-                className="px-6 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-sm"
+                className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-xs"
                 data-testid="nav-quem-somos"
               >
                 QUEM SOMOS?
               </button>
               <button 
                 onClick={() => scrollToSection('footer')}
-                className="px-6 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-sm"
+                className="px-4 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-xs"
                 data-testid="nav-contato"
               >
                 CONTATO
@@ -89,14 +89,14 @@ export default function Header() {
             </div>
           </div>
           
-          {/* CTA Section - Right aligned, same size as logo */}
-          <div className="flex items-center justify-end">
+          {/* CTA Section - Right aligned with fixed width matching logo */}
+          <div className="flex items-center justify-end min-w-0 flex-shrink-0">
             <Button 
               onClick={scrollToForm}
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hidden md:flex font-semibold px-6 py-2.5 rounded-full tracking-wide text-sm h-12"
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hidden md:flex font-semibold px-5 py-2.5 rounded-full tracking-wide text-xs h-12"
               data-testid="button-form-header"
             >
-              <SiWhatsapp className="mr-2 text-lg" />
+              <SiWhatsapp className="mr-2 text-base" />
               SOLICITAR ORÇAMENTO
             </Button>
             
