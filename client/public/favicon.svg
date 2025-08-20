@@ -1,28 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-  <!-- Background with gradient matching header logo -->
-  <rect width="48" height="48" rx="12" fill="url(#gradient)"/>
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Gradiente idêntico ao do cabeçalho: from-emerald-600 to-teal-600 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#059669"/>
       <stop offset="100%" style="stop-color:#0d9488"/>
     </linearGradient>
-  </defs>
-  
-  <!-- Stethoscope icon matching the header -->
-  <g transform="translate(12, 12)" fill="white">
-    <!-- Main tube -->
-    <path d="M11 2a1 1 0 0 0-1 1v5.5a3 3 0 0 0 1.5 2.6l.5.3V20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8.6l.5-.3A3 3 0 0 0 8 8.5V3a1 1 0 0 0-2 0v5.5a1 1 0 0 1-.5.9L4 10.3a1 1 0 0 0-.5.9V20a4 4 0 0 0 4 4h2a4 4 0 0 0 4-4v-8.8a1 1 0 0 0-.5-.9L11.5 9.4a1 1 0 0 1-.5-.9V3a1 1 0 0 0-1-1Z"/>
-    <!-- Chest piece -->
-    <circle cx="3" cy="18" r="3"/>
-    <circle cx="3" cy="18" r="1.5" fill="url(#gradient)"/>
-  </g>
-  
-  <!-- Highlight effect -->
-  <rect width="48" height="48" rx="12" fill="url(#highlight)" opacity="0.2"/>
-  <defs>
-    <linearGradient id="highlight" x1="0%" y1="0%" x2="60%" y2="60%">
-      <stop offset="0%" style="stop-color:white"/>
+    <!-- Efeito de brilho idêntico ao do cabeçalho -->
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.2)"/>
       <stop offset="100%" style="stop-color:transparent"/>
     </linearGradient>
   </defs>
+  
+  <!-- Fundo com gradiente e bordas arredondadas (rounded-2xl = 16px em 48px) -->
+  <rect width="48" height="48" rx="16" fill="url(#bgGradient)"/>
+  
+  <!-- Ícone do estetoscópio do Lucide React em branco, tamanho 24px (text-2xl) -->
+  <g transform="translate(12, 12)" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 2v6"/>
+    <path d="M5 2v6"/>
+    <path d="M12 2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V2z"/>
+    <circle cx="6" cy="18" r="3"/>
+    <path d="M9 15l-3 3"/>
+    <path d="M21 15l-6-6"/>
+    <circle cx="21" cy="18" r="3"/>
+  </g>
+  
+  <!-- Efeito de brilho idêntico ao do cabeçalho -->
+  <rect width="48" height="48" rx="16" fill="url(#highlight)"/>
 </svg>
