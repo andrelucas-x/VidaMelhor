@@ -50,8 +50,9 @@ export default function AboutSection() {
                     />
                   </div>
                 </div>
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-lg border border-emerald-100">
-                  <p className="text-emerald-700 font-bold text-sm">Fundador e Responsável</p>
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-6 py-3 rounded-full shadow-lg border border-emerald-100">
+                  <p className="text-emerald-700 font-bold text-sm text-center">Jessé Sales</p>
+                  <p className="text-neutral-600 text-xs text-center -mt-1">Fundador e Responsável</p>
                 </div>
               </div>
             </div>
