@@ -26,10 +26,33 @@ export default function Footer() {
             <p className="text-neutral-400 mb-4" data-testid="footer-description">
               Cuidado especializado e humanizado no conforto do seu lar.
             </p>
-            <p className="text-neutral-400 text-sm" data-testid="footer-area-atendimento">
+            <p className="text-neutral-400 text-sm mb-4" data-testid="footer-area-atendimento">
               Atendemos Curitiba e região metropolitana.
             </p>
             
+            {/* Redes Sociais */}
+            <div className="flex space-x-3">
+              <a 
+                href="https://www.facebook.com/jesse.j.sales/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-neutral-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors duration-300 group"
+                data-testid="link-facebook"
+                aria-label="Facebook Vida Melhor Home Care"
+              >
+                <Facebook className="text-neutral-400 group-hover:text-white transition-colors duration-300" size={18} />
+              </a>
+              <a 
+                href="https://www.instagram.com/jessersales/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-neutral-800 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-full flex items-center justify-center transition-all duration-300 group"
+                data-testid="link-instagram"
+                aria-label="Instagram Vida Melhor Home Care"
+              >
+                <Instagram className="text-neutral-400 group-hover:text-white transition-colors duration-300" size={18} />
+              </a>
+            </div>
           </div>
 
           <div data-testid="footer-services">
