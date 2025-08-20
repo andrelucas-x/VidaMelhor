@@ -1,4 +1,5 @@
 import { Heart, Award, Users, Clock } from "lucide-react";
+import responsavelImage from "@assets/image_1755724102293.png";
 
 export default function AboutSection() {
   return (
@@ -35,38 +36,59 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Cards com marcos da empresa */}
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-2xl text-center border border-emerald-100" data-testid="card-inicio">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Heart className="text-white" size={24} />
+          {/* Foto do responsável e cards com marcos da empresa */}
+          <div className="space-y-8">
+            {/* Foto do responsável */}
+            <div className="flex justify-center" data-testid="responsavel-photo">
+              <div className="relative">
+                <div className="p-1 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl shadow-2xl">
+                  <div className="w-48 h-48 rounded-xl overflow-hidden bg-white">
+                    <img 
+                      src={responsavelImage} 
+                      alt="Responsável pela Vida Melhor Home Care"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-lg border border-emerald-100">
+                  <p className="text-emerald-700 font-bold text-sm">Fundador e Responsável</p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-emerald-700 mb-2">2003</h3>
-              <p className="text-neutral-600 text-sm font-medium">Início na enfermagem</p>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-2xl text-center border border-emerald-100" data-testid="card-domiciliar">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Users className="text-white" size={24} />
+            {/* Cards com marcos da empresa */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-xl text-center border border-emerald-100" data-testid="card-inicio">
+                <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Heart className="text-white" size={20} />
+                </div>
+                <h3 className="text-xl font-bold text-emerald-700 mb-1">2003</h3>
+                <p className="text-neutral-600 text-xs font-medium">Início na enfermagem</p>
               </div>
-              <h3 className="text-2xl font-bold text-emerald-700 mb-2">2005</h3>
-              <p className="text-neutral-600 text-sm font-medium">Primeiros atendimentos domiciliares</p>
-            </div>
 
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-2xl text-center border border-emerald-100" data-testid="card-empresa">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Award className="text-white" size={24} />
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-xl text-center border border-emerald-100" data-testid="card-domiciliar">
+                <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Users className="text-white" size={20} />
+                </div>
+                <h3 className="text-xl font-bold text-emerald-700 mb-1">2005</h3>
+                <p className="text-neutral-600 text-xs font-medium">Primeiros atendimentos domiciliares</p>
               </div>
-              <h3 className="text-2xl font-bold text-emerald-700 mb-2">2016</h3>
-              <p className="text-neutral-600 text-sm font-medium">Fundação oficial da empresa</p>
-            </div>
 
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-2xl text-center border border-emerald-100" data-testid="card-pacientes">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-white" size={24} />
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-xl text-center border border-emerald-100" data-testid="card-empresa">
+                <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Award className="text-white" size={20} />
+                </div>
+                <h3 className="text-xl font-bold text-emerald-700 mb-1">2016</h3>
+                <p className="text-neutral-600 text-xs font-medium">Fundação oficial da empresa</p>
               </div>
-              <h3 className="text-2xl font-bold text-emerald-700 mb-2">+1000</h3>
-              <p className="text-neutral-600 text-sm font-medium">Pacientes atendidos</p>
+
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-xl text-center border border-emerald-100" data-testid="card-pacientes">
+                <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Clock className="text-white" size={20} />
+                </div>
+                <h3 className="text-xl font-bold text-emerald-700 mb-1">+1000</h3>
+                <p className="text-neutral-600 text-xs font-medium">Pacientes atendidos</p>
+              </div>
             </div>
           </div>
         </div>
