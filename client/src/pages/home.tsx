@@ -3,6 +3,7 @@ import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import PreQualificationForm from "@/components/pre-qualification-form";
 import DifferentialsSection from "@/components/differentials-section";
+import AboutSection from "@/components/about-section";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { ClipboardList } from "lucide-react";
@@ -56,6 +57,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <AboutSection />
       </main>
       <Footer />
     </div>

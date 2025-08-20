@@ -73,6 +73,13 @@ export default function Header() {
                 DIFERENCIAIS
               </button>
               <button 
+                onClick={() => scrollToSection('quem-somos')}
+                className="px-6 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-sm"
+                data-testid="nav-quem-somos"
+              >
+                QUEM SOMOS?
+              </button>
+              <button 
                 onClick={() => scrollToSection('footer')}
                 className="px-6 py-2 rounded-full text-neutral-600 hover:text-white hover:bg-emerald-600 transition-all duration-300 font-semibold tracking-wide text-sm"
                 data-testid="nav-contato"
@@ -128,6 +135,13 @@ export default function Header() {
                 data-testid="nav-mobile-diferenciais"
               >
                 DIFERENCIAIS
+              </button>
+              <button 
+                onClick={() => scrollToSection('quem-somos')}
+                className="text-left px-4 py-2 rounded-lg text-neutral-600 hover:text-primary hover:bg-primary/10 transition-all duration-300 font-semibold tracking-wide"
+                data-testid="nav-mobile-quem-somos"
+              >
+                QUEM SOMOS?
               </button>
               <button 
                 onClick={() => scrollToSection('footer')}
