@@ -93,10 +93,10 @@ export default function Header() {
           <div className="flex items-center justify-end min-w-0 flex-shrink-0">
             <Button 
               onClick={scrollToForm}
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hidden md:flex font-semibold px-5 py-2.5 rounded-full tracking-wide text-xs h-12"
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hidden md:flex font-semibold px-4 py-2 rounded-full tracking-wide text-xs h-10"
               data-testid="button-form-header"
             >
-              <SiWhatsapp className="mr-2 text-base" />
+              <SiWhatsapp className="mr-1.5 text-sm" />
               SOLICITAR ORÇAMENTO
             </Button>
             
