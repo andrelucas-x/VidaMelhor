@@ -39,8 +39,8 @@ export default function AboutSection() {
           {/* Foto do responsável e cards com marcos da empresa */}
           <div className="space-y-8">
             {/* Foto do responsável */}
-            <div className="flex justify-center" data-testid="responsavel-photo">
-              <div className="relative">
+            <div className="flex flex-col items-center" data-testid="responsavel-photo">
+              <div className="relative mb-8">
                 <div className="p-1 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl shadow-2xl">
                   <div className="w-48 h-48 rounded-xl overflow-hidden bg-white">
                     <img 
@@ -50,10 +50,12 @@ export default function AboutSection() {
                     />
                   </div>
                 </div>
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-6 py-3 rounded-full shadow-lg border border-emerald-100">
-                  <p className="text-emerald-700 font-bold text-sm text-center">Jessé Sales</p>
-                  <p className="text-neutral-600 text-xs text-center -mt-1">Fundador e Responsável</p>
-                </div>
+              </div>
+              
+              {/* Etiqueta separada e bem posicionada */}
+              <div className="bg-white px-8 py-4 rounded-2xl shadow-lg border border-emerald-100 -mt-4">
+                <h4 className="text-emerald-700 font-bold text-lg text-center">Jessé Sales</h4>
+                <p className="text-neutral-600 text-sm text-center mt-1">Fundador e Responsável</p>
               </div>
             </div>
 
