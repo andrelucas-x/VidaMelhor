@@ -4,6 +4,10 @@
     {
       "src": "client/index.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/next" // ou "@vercel/node" dependendo do framework
     }
   ],
   "routes": [
