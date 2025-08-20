@@ -52,9 +52,9 @@ export default function AboutSection() {
                 </div>
                 
                 {/* Etiqueta sobreposta - metade dentro, metade fora */}
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-white px-6 py-3 rounded-2xl shadow-xl border border-emerald-100 z-10">
-                  <h4 className="text-emerald-700 font-bold text-base text-center">Jessé Sales</h4>
-                  <p className="text-neutral-600 text-xs text-center mt-1">Fundador e Responsável</p>
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-8 py-2 rounded-2xl shadow-xl border border-emerald-100 z-10 whitespace-nowrap">
+                  <h4 className="text-emerald-700 font-bold text-sm text-center">Jessé Sales</h4>
+                  <p className="text-neutral-600 text-xs text-center">Fundador e Responsável</p>
                 </div>
               </div>
             </div>
