@@ -1,6 +1,6 @@
 export interface WhatsAppFormData {
   responsavelNome: string;
-  telefone: string;
+  nomePaciente: string;
   idadePaciente: string;
   tipoCuidado: string;
   comorbidades?: string;
@@ -14,7 +14,7 @@ export function formatWhatsAppMessage(data: WhatsAppFormData): string {
   const message = `🏥 *Solicitação de Orçamento - Vida Melhor Home Care*
 
 👤 *Responsável:* ${data.responsavelNome}
-📱 *Telefone:* ${data.telefone}
+🧑‍⚕️ *Nome do Paciente:* ${data.nomePaciente}
 👥 *Idade do Paciente:* ${data.idadePaciente}
 🩺 *Tipo de Cuidado:* ${data.tipoCuidado}
 ${data.observacoes ? `📝 *Observações:* ${data.observacoes}` : ''}

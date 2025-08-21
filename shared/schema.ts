@@ -12,7 +12,7 @@ export const users = pgTable("users", {
 export const preQualifications = pgTable("pre_qualifications", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   responsavelNome: text("responsavel_nome").notNull(),
-  telefone: text("telefone").notNull(),
+  nomePaciente: text("nome_paciente").notNull(),
   idadePaciente: text("idade_paciente").notNull(),
   tipoCuidado: text("tipo_cuidado").notNull(),
   comorbidades: text("comorbidades"),
@@ -33,7 +33,7 @@ export const insertPreQualificationSchema = createInsertSchema(preQualifications
   createdAt: true,
 }).extend({
   responsavelNome: z.string().min(2, "Nome é obrigatório"),
-  telefone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos"),
+  nomePaciente: z.string().min(2, "Nome do paciente é obrigatório"),
   idadePaciente: z.string().min(1, "Idade do paciente é obrigatória"),
   tipoCuidado: z.string().min(1, "Tipo de cuidado é obrigatório"),
   observacoes: z.string().optional(),

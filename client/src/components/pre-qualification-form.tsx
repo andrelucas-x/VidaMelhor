@@ -32,7 +32,7 @@ export default function PreQualificationForm() {
     resolver: zodResolver(insertPreQualificationSchema),
     defaultValues: {
       responsavelNome: "",
-      telefone: "",
+      nomePaciente: "",
       idadePaciente: "",
       tipoCuidado: "",
       observacoes: ""
@@ -46,7 +46,7 @@ export default function PreQualificationForm() {
       // Prepare data for WhatsApp with only the essential fields and optional observations
       const whatsappData = {
         responsavelNome: data.responsavelNome,
-        telefone: data.telefone,
+        nomePaciente: data.nomePaciente,
         idadePaciente: data.idadePaciente,
         tipoCuidado: data.tipoCuidado,
         observacoes: data.observacoes || undefined
@@ -108,15 +108,15 @@ export default function PreQualificationForm() {
 
                 <FormField
                   control={form.control}
-                  name="telefone"
+                  name="nomePaciente"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel data-testid="label-telefone">Telefone/WhatsApp *</FormLabel>
+                      <FormLabel data-testid="label-nome-paciente">Nome do Paciente *</FormLabel>
                       <FormControl>
                         <Input 
-                          placeholder="(11) 99999-9999" 
+                          placeholder="Nome completo do paciente" 
                           {...field}
-                          data-testid="input-telefone"
+                          data-testid="input-nome-paciente"
                         />
                       </FormControl>
                       <FormMessage />
