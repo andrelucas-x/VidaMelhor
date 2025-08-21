@@ -24,7 +24,7 @@ Gostaria de receber mais informações sobre os serviços de home care. Aguardo 
   return message;
 }
 
-export function redirectToWhatsApp(formData: WhatsAppFormData, phoneNumber: string = "554199625464"): void {
+export function redirectToWhatsApp(formData: WhatsAppFormData, phoneNumber: string = "5541996254624"): void {
   const message = formatWhatsAppMessage(formData);
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
